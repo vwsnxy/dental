@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.service-card').forEach(card => {
         card.addEventListener('mouseenter', function() {
             this.style.transform = 'translateY(-10px) scale(1.02)';
-            this.style.boxShadow = '0 20px 40px rgba(37, 99, 235, 0.15)';
+            this.style.boxShadow = '0 20px 40px rgba(16, 185, 129, 0.15)';
         });
 
         card.addEventListener('mouseleave', function() {

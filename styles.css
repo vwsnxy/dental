@@ -44,26 +44,26 @@ body {
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    color: #1e40af;
+    color: #10b981;
 }
 
 .logo-icon {
     width: 45px;
     height: 45px;
-    background: linear-gradient(135deg, #1e40af 0%, #3730a3 100%);
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     font-size: 1.3rem;
-    box-shadow: 0 4px 15px rgba(30, 64, 175, 0.3);
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
     transition: all 0.3s ease;
 }
 
 .logo-icon:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(30, 64, 175, 0.4);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
 }
 
 .logo-text {
@@ -75,7 +75,7 @@ body {
 .logo-title {
     font-size: 1.4rem;
     font-weight: 800;
-    color: #1e40af;
+    color: #10b981;
     margin: 0;
 }
 
@@ -104,7 +104,7 @@ body {
 }
 
 .nav-links a:hover {
-    color: #1e40af;
+    color: #10b981;
 }
 
 .whatsapp-btn {
@@ -311,11 +311,13 @@ body {
 .hero-dentist {
     width: 400px;
     height: 400px;
-    border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     animation: float 6s ease-in-out infinite;
     position: relative;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border: 4px solid #10b981;
 }
 
 .dentist-img {
@@ -325,6 +327,19 @@ body {
     border-radius: 50%;
 }
 
+.hero-dentist::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    border-radius: 50%;
+    z-index: -1;
+    animation: pulse 2s ease-in-out infinite;
+}
+
 @keyframes float {
     0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-20px); }
@@ -332,7 +347,7 @@ body {
 
 /* Statistics Bar */
 .stats-bar {
-    background: linear-gradient(135deg, #1e40af 0%, #3730a3 100%);
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
     padding: 40px 0;
     color: white;
     position: relative;
@@ -423,7 +438,7 @@ body {
     transform: translateX(-50%);
     width: 60px;
     height: 4px;
-    background: linear-gradient(135deg, #1e40af 0%, #3730a3 100%);
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
     border-radius: 2px;
 }
 
@@ -453,13 +468,13 @@ body {
     text-align: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    border: 1px solid rgba(30, 64, 175, 0.05);
+    border: 1px solid rgba(16, 185, 129, 0.05);
 }
 
 .service-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(30, 64, 175, 0.15);
-    border-color: rgba(30, 64, 175, 0.2);
+    box-shadow: 0 20px 40px rgba(16, 185, 129, 0.15);
+    border-color: rgba(16, 185, 129, 0.2);
 }
 
 .service-card:hover .service-icon {
@@ -473,7 +488,7 @@ body {
 .service-icon {
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, #1e40af 0%, #3730a3 100%);
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -559,7 +574,7 @@ body {
     height: 400px;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 20px 40px rgba(30, 64, 175, 0.2);
+    box-shadow: 0 20px 40px rgba(16, 185, 129, 0.2);
     transition: all 0.3s ease;
 }
 
@@ -576,7 +591,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(30, 64, 175, 0.1);
+    background: rgba(16, 185, 129, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -586,7 +601,7 @@ body {
 
 .cross-line {
     position: absolute;
-    background: rgba(30, 64, 175, 0.8);
+    background: rgba(16, 185, 129, 0.8);
     border-radius: 2px;
 }
 
@@ -604,7 +619,7 @@ body {
 
 .about-img-container:hover {
     transform: scale(1.05);
-    box-shadow: 0 25px 50px rgba(30, 64, 175, 0.3);
+    box-shadow: 0 25px 50px rgba(16, 185, 129, 0.3);
 }
 
 .about-img-container:hover .cross-overlay {
@@ -619,35 +634,85 @@ body {
 /* Contact Section */
 .contact {
     padding: 80px 0;
-    background: #f8fafc;
+    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
 }
 
-.contact-content {
+.contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
+    margin-top: 3rem;
+    align-items: start;
 }
 
-.contact-item {
+.contact-left {
     display: flex;
-    gap: 1rem;
-    margin-bottom: 2rem;
-    padding: 1.5rem;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-    border: 1px solid rgba(30, 64, 175, 0.05);
+    flex-direction: column;
+    gap: 2rem;
 }
 
-.contact-icon {
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, #1e40af 0%, #3730a3 100%);
-    border-radius: 50%;
+.contact-info-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(16, 185, 129, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-info-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.contact-info-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(16, 185, 129, 0.15);
+    border-color: #10b981;
+}
+
+.info-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.info-header i {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.info-header h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
     color: white;
     flex-shrink: 0;
     transition: all 0.3s ease;
@@ -663,6 +728,71 @@ body {
 .contact-details p {
     color: #6b7280;
     line-height: 1.5;
+}
+
+.info-content {
+    color: #374151;
+}
+
+.info-content p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.location {
+    font-weight: 600;
+    color: #1e293b;
+    margin-top: 0.75rem !important;
+}
+
+.phone-number {
+    display: block;
+    color: #10b981;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.phone-number:hover {
+    color: #059669;
+}
+
+.availability {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin: 0.5rem 0 0 0;
+    font-style: italic;
+}
+
+.whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #10b981;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    margin-bottom: 0.5rem;
+}
+
+.whatsapp-button:hover {
+    background: #059669;
+    transform: translateY(-2px);
+    color: white;
+}
+
+.response-time {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin: 0.5rem 0 0 0;
+    font-style: italic;
 }
 
 .whatsapp-contact {
@@ -691,18 +821,73 @@ body {
     box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
 }
 
-.map-container {
-    position: relative;
-    transition: all 0.3s ease;
+.contact-right {
+    display: flex;
+    flex-direction: column;
 }
 
-.map-wrapper {
-    position: relative;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+.map-card {
     background: white;
-    padding: 20px;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(16, 185, 129, 0.1);
+    height: 100%;
+}
+
+.map-header {
+    margin-bottom: 1.5rem;
+}
+
+.map-header h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0 0 0.5rem 0;
+}
+
+.map-header p {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.map-frame {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 300px;
+    background: #f8fafc;
+}
+
+.map-frame iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.map-overlay-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255, 255, 255, 0.95);
+    color: #10b981;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.map-overlay-btn:hover {
+    background: #10b981;
+    color: white;
+    transform: translateY(-2px);
 }
 
 .map-wrapper iframe {
@@ -722,7 +907,7 @@ body {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    background: linear-gradient(135deg, #1e40af 0%, #3730a3 100%);
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
     color: white;
     padding: 0.75rem 1.5rem;
     border-radius: 50px;
@@ -730,19 +915,19 @@ body {
     font-weight: 600;
     font-size: 0.9rem;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(30, 64, 175, 0.3);
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
 }
 
 .open-maps-btn:hover {
-    background: linear-gradient(135deg, #1e3a8a 0%, #312e81 100%);
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(30, 64, 175, 0.4);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
     color: white;
 }
 
 .map-container:hover .map-wrapper {
     transform: scale(1.02);
-    box-shadow: 0 15px 40px rgba(30, 64, 175, 0.2);
+    box-shadow: 0 15px 40px rgba(16, 185, 129, 0.2);
 }
 
 
@@ -801,6 +986,11 @@ body {
     .hero-dentist {
         width: 300px;
         height: 300px;
+        border-radius: 50%;
+    }
+    
+    .hero-dentist .dentist-img {
+        border-radius: 50%;
     }
     
     .services-grid {
@@ -821,9 +1011,21 @@ body {
         height: 300px;
     }
     
-    .contact-content {
+    .contact-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+    
+    .contact-info-card {
+        padding: 1.5rem;
+    }
+    
+    .info-header h3 {
+        font-size: 1.2rem;
+    }
+    
+    .map-card {
+        padding: 1.5rem;
     }
     
     .section-header h2 {
@@ -893,6 +1095,11 @@ body {
     .hero-dentist {
         width: 250px;
         height: 250px;
+        border-radius: 50%;
+    }
+    
+    .hero-dentist .dentist-img {
+        border-radius: 50%;
     }
     
     .service-card {
@@ -904,9 +1111,25 @@ body {
         height: 250px;
     }
     
-    .contact-item {
-        flex-direction: column;
+    .contact-info-card {
+        padding: 1.25rem;
         text-align: center;
+    }
+    
+    .info-header {
+        justify-content: center;
+    }
+    
+    .info-header h3 {
+        font-size: 1.1rem;
+    }
+    
+    .phone-number {
+        text-align: center;
+    }
+    
+    .whatsapp-button {
+        justify-content: center;
     }
     
     .map-wrapper {
@@ -1042,8 +1265,8 @@ html {
 
 .contact-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(30, 64, 175, 0.15);
-    border-color: rgba(30, 64, 175, 0.2);
+    box-shadow: 0 10px 25px rgba(16, 185, 129, 0.15);
+    border-color: rgba(16, 185, 129, 0.2);
 }
 
 .contact-item:hover .contact-icon {

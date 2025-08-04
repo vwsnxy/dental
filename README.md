@@ -54,13 +54,13 @@ In `styles.css`, you can change the color scheme:
 
 ```css
 /* Primary brand color */
---primary-color: #2563eb;
+--primary-color: #10b981;
 
 /* WhatsApp green */
 --whatsapp-color: #25d366;
 
 /* Gradient colors */
-background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+background: linear-gradient(135deg, #10b981 0%, #059669 100%);
 ```
 
 ### 4. Add Real Images
